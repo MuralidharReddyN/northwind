@@ -50,7 +50,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_ht2",
+						"referenceName": "trg_Categories",
 						"type": "DatasetReference"
 					}
 				]

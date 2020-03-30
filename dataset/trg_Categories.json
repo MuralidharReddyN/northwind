@@ -1,5 +1,5 @@
 {
-	"name": "DestinationDataset_ht2",
+	"name": "trg_Categories",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "trg_ADLSGEN2",
