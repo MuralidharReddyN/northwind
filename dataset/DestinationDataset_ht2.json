@@ -1,0 +1,23 @@
+{
+	"name": "DestinationDataset_ht2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "trg_ADLSGEN2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ingestion/masterdata/sales",
+				"fileSystem": "northwind"
+			},
+			"columnDelimiter": "|",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
