@@ -1,0 +1,61 @@
+{
+	"name": "SQL_2_ADLS_Categories",
+	"properties": {
+		"description": "Ingest Categories from SQL Server to Storage Account",
+		"activities": [
+			{
+				"name": "Copy_ht2",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.Categories"
+					},
+					{
+						"name": "Destination",
+						"value": "northwind/ingestion/masterdata/sales/"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource"
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"enableSkipIncompatibleRow": false
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_ht2",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_ht2",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

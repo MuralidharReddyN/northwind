@@ -1,0 +1,33 @@
+{
+	"name": "SourceDataset_ht2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "localSQLServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "CategoryID",
+				"type": "int"
+			},
+			{
+				"name": "CategoryName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Description",
+				"type": "ntext"
+			},
+			{
+				"name": "Picture",
+				"type": "image"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Categories"
+		}
+	}
+}
