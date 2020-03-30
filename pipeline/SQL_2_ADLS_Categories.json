@@ -44,7 +44,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_ht2",
+						"referenceName": "src_Categories",
 						"type": "DatasetReference"
 					}
 				],

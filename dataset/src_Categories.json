@@ -1,5 +1,5 @@
 {
-	"name": "SourceDataset_ht2",
+	"name": "src_Categories",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "localSQLServer",
